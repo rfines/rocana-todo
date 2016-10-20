@@ -5,7 +5,7 @@ const TodoList = ({ todos }) => (
 
   <ul className="list-group">
     {todos.map(todo =>
-      <TodoListItemContainer key={todo.id} text={todo.text} id={todo.id} />
+      <TodoListItemContainer key={todo.id} {...todo} />
     )}
   </ul>
 )

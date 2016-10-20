@@ -4,8 +4,12 @@ import TodoListContainer from '../containers/TodoListContainer.js';
 
 const App = () => (
   <div>
-    <TodoListContainer />
-    <TodoForm />
+    <div className="list-contents">
+      <TodoListContainer />
+    </div>
+    <div className="form-bottom text-center">
+      <TodoForm />
+    </div>
   </div>
 )
 

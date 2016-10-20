@@ -15,7 +15,7 @@ let TodoForm = ({ dispatch }) => {
       input.value = ''
     }}>
       <div className="text-center">
-        <input className="form-control" type="text" name="new-item" ref={node => {
+        <input className="form-control col-md-8" style={{ width: "300px" }} type="text" name="new-item" ref={node => {
           input = node
         }}/>
         <input className="btn btn-primary" type="submit" value="Add Item" />

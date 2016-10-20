@@ -1,3 +1,9 @@
+.legend {
+  border: 1px solid #80D651;
+  border-left-width: 6px;
+  color: #3c763d;
+}
+/*Styles for the list items*/
 .notice {
     padding: 15px;
     background-color: #fafafa;
@@ -6,14 +12,6 @@
     -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
        -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
             box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
-}
-.notice-sm {
-    padding: 10px;
-    font-size: 80%;
-}
-.notice-lg {
-    padding: 35px;
-    font-size: large;
 }
 .notice-success {
     border-color: #80D651;
@@ -40,15 +38,87 @@
     color: #d73814;
 }
 
+/*Complementary styles for buttons and links.*/
 .btn-primary {
   background-color: #80D651;
+  border-color: #4eaf19;
 }
-.btn-primar:hover {
+.btn-primary:hover, .btn-primary:active {
   background-color: #4eaf19;
 }
 .btn-link {
   color: #80D651;
 }
-.btn-link:hover{
+.btn-link:hover, .btn-link:active{
   color: #4eaf19;
+}
+.btn-link-info {
+  color: #45ABCD;
+}
+.btn-link-info:hover, .btn-link-info:active{
+  color: #34849e;
+}
+.btn-info{
+  background-color: #45ABCD;
+}
+.btn-info:hover, .btn-info:active{
+  background-color: #34849e;
+}
+/*Main Panel Styles*/
+.todo-list-panel{
+  background-color: #403F4C;
+  min-height:800px;
+  padding-bottom:30px;
+}
+/*Form Stylesa*/
+.form-bottom{
+  position:absolute;
+  left:25%;
+}
+.list-contents{
+  min-height:400px;
+}
+.content-container{
+  min-height:600px;
+}
+
+
+/*Footer Styles */
+.footer{
+  height:200px;
+  bottom:0;
+  color:#CFCFEA;
+  border-top:2px solid #80D651;
+}
+.footer-social {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.footer-social-container{
+  margin-top: 20px;
+  color: #fff;
+  width: 100%;
+}
+
+.fa-twitter {
+  color: #4099FF;
+}
+.fa-linkedin {
+  color: #007bb6;
+}
+.fa-github{
+  color: #fff;
+}
+.fa {
+  opacity: 0.7;
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+
+.fa:hover{
+  opacity: 1;
+  transition: 1s;
+  -webkit-transition: 1s;
 }

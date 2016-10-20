@@ -11,12 +11,24 @@ const TodoList = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
+          completed:false
         }]);
+    case 'todo.done': // return a new array with the specified todo item marked completed.
+      return _.map(state, (todo) => {
+        if (todo.id === action.id) {
+          return {
+            id: todo.id,
+            text: todo.text,
+            completed: true
+          };
+        }
+        return todo;
+      });
     case 'todo.remove':
       //return a new array with the removed todo missing.
       return _.reject(state, (todo) => todo.id === action.id);
     default:
-      return state
+      return state;
   }
 };
 

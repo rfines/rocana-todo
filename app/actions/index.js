@@ -26,4 +26,12 @@ const removeTodo = (id) => {
   }
 };
 
-export { addTodo, removeTodo };
+// return an action to dispatch to complete the TodoItem with the given Id.
+const completeTodo = (id) => {
+  return {
+    type: 'todo.done',
+    id
+  }
+};
+
+export { addTodo, removeTodo, completeTodo };
