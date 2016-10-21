@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --debug"
+    "build": "webpack --debug --progress --colors --watch"
   },
   "author": "Robert Fines",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "immutable": "^3.8.1",
     "lodash": "^4.16.4",
     "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",

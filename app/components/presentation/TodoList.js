@@ -1,15 +1,28 @@
 import React, { PropTypes } from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import TodoListItemContainer from '../containers/TodoListItemContainer.js'
 
-const TodoList = ({ todos }) => (
+class TodoList extends React.Component {
 
-  <ul className="list-group">
-    {todos.map(todo =>
+
+  render () {
+    let items = this.props.todos.map((todo, i) => (
       <TodoListItemContainer key={todo.id} {...todo} />
-    )}
-  </ul>
-)
-
+    ));
+    return (
+      <ul className="list-group">
+        <ReactCSSTransitionGroup
+          transitionName='fade'
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={400}
+          transitionAppear={true}
+          transitionAppearTimeout={500}>
+          {items}
+        </ReactCSSTransitionGroup>
+    </ul>
+    )
+  }
+}
 //a todo list contains a list of todo items and a callback to call when the todo is clicked.
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
