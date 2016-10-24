@@ -3,8 +3,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import TodoListItemContainer from '../containers/TodoListItemContainer.js'
 
 class TodoList extends React.Component {
-
-
   render () {
     let items = this.props.todos.map((todo, i) => (
       <TodoListItemContainer key={todo.id} {...todo} />
@@ -27,7 +25,8 @@ class TodoList extends React.Component {
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired
   }).isRequired).isRequired,
 }
 

@@ -34,4 +34,4 @@ const completeTodo = (id) => {
   }
 };
 
-export { addTodo, removeTodo, completeTodo };
+export { addTodo, removeTodo, completeTodo, makeId };
